@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+function generateLink(){
+	console.log(("hello").substr());
+	var id = document.getElementById("id").value;
+	var name = document.getElementById("name").value;
+	var email = document.getElementById("email").value;
+	var link = "http://127.0.0.1:1337/set_user_data/" + id + "/" + name + "/" + email + "/";
+	document.getElementById("spit_link").innerHTML = "<a href=" + link + ">Your Link</a>";
+}
+</script>
+</head>
+<body>
+<form>
+	ID : <input type="text" name="id" id="id"/><br/>
+	Name : <input type="text" name="name" id="name"/><br/>
+	Email : <input type="text" name="email" id="email"/><br/>
+	<input type="button" value="generate link" onclick="generateLink(this);"/><br/><br/>
+</form>
+Link: <span id="spit_link"></span>
+</body>
+</html>
